@@ -199,7 +199,7 @@ def call_intern_vl2(client, image, text_prompt, temperature:float=0.0):
 
 
 # call_llava_onevision = None
-
+'''
 from llava.mm_utils import get_model_name_from_path, process_images, tokenizer_image_token
 from llava.constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN, IGNORE_INDEX
 from llava.conversation import conv_templates, SeparatorStyle
@@ -276,7 +276,7 @@ def call_llava_onevision(client, image, text_prompt, temperature:float=0.0):
     )
     output = tokenizer.batch_decode(cont, skip_special_tokens=True)[0]
     return output
-
+'''
 
 
 # call_minicpm = None

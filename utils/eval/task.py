@@ -144,8 +144,8 @@ def vlm_pun_meme_detection(dataset_path:str, model:str, client, language:str, pr
             'intern-vl2_5-38b': call_intern_vl2,
             'intern-vl2_5-26b': call_intern_vl2,
             'intern-vl2_5-8b': call_intern_vl2,
-            'llava-onevision-qwen2-72b-ov-chat': call_llava_onevision,
-            'llava-onevision-qwen2-7b-ov': call_llava_onevision,
+#            'llava-onevision-qwen2-72b-ov-chat': call_llava_onevision,
+#            'llava-onevision-qwen2-7b-ov': call_llava_onevision,
             'minicpm-v-2_6': call_minicpm}
     mode = [None, 'only_image(zero_shot)', 'image_&_caption(zero_shot)',
             'only_image(few_shot)', 'image_&_caption(few_shot)', 'image_&_caption_&_pinyin(few_shot)',
