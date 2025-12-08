@@ -40,8 +40,8 @@ def obtain_client(model):
     elif model == 'qwen2.5-vl-7b-instruct':
         # Qwen2.5-VL-7B-Instruct
         from transformers import Qwen2_5_VLForConditionalGeneration, AutoTokenizer, AutoProcessor
-        qwen25_vl = Qwen2_5_VLForConditionalGeneration.from_pretrained("Qwen/Qwen2.5-VL-7B-Instruct", torch_dtype="auto", device_map="auto")
-        processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-7B-Instruct")
+        qwen25_vl = Qwen2_5_VLForConditionalGeneration.from_pretrained("/data/model/Qwen2.5-VL-7B-Instruct", torch_dtype="auto", device_map="auto")
+        processor = AutoProcessor.from_pretrained("/data/model/Qwen2.5-VL-7B-Instruct")
         client = [processor, qwen25_vl]
     elif model == 'intern-vl2_5-78b':
         # InternVL2_5-78B

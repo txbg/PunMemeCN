@@ -1,5 +1,4 @@
 anthropic==0.43.1
-llava==1.7.0.dev0
 mantis_vl==0.0.5
 matplotlib==3.10.0
 openai==1.59.8
@@ -11,4 +10,3 @@ qwen_vl_utils==0.0.8
 torch==2.5.1
 torchvision==0.20.1
 tqdm==4.66.5
-transformers==4.46.3
