@@ -40,8 +40,8 @@ def obtain_client(model):
     elif model == 'qwen2.5-vl-7b-instruct':
         # Qwen2.5-VL-7B-Instruct
         from transformers import Qwen2_5_VLForConditionalGeneration, AutoTokenizer, AutoProcessor
-        qwen25_vl = Qwen2_5_VLForConditionalGeneration.from_pretrained("/root/autodl-tmp/model/Qwen2.5-VL-7B-Instruct", torch_dtype="auto", device_map="auto")
-        processor = AutoProcessor.from_pretrained("/root/autodl-tmp/model/Qwen2.5-VL-7B-Instruct")
+        qwen25_vl = Qwen2_5_VLForConditionalGeneration.from_pretrained("/data/model/Qwen2.5-VL-7B-Instruct", torch_dtype="auto", device_map="auto")
+        processor = AutoProcessor.from_pretrained("/data/model/Qwen2.5-VL-7B-Instruct")
         client = [processor, qwen25_vl]
     elif model == 'intern-vl2_5-78b':
         # InternVL2_5-78B
@@ -435,8 +435,8 @@ def vlm_pun_meme_sentiment_analysis(dataset_path:str, model:str, client, languag
             'intern-vl2_5-38b': call_intern_vl2,
             'intern-vl2_5-26b': call_intern_vl2,
             'intern-vl2_5-8b': call_intern_vl2,
-            'llava-onevision-qwen2-72b-ov-chat': call_llava_onevision,
-            'llava-onevision-qwen2-7b-ov': call_llava_onevision,
+#            'llava-onevision-qwen2-72b-ov-chat': call_llava_onevision,
+#            'llava-onevision-qwen2-7b-ov': call_llava_onevision,
             'minicpm-v-2_6': call_minicpm}
     mode = [None, 'only_image(zero_shot)', 'image_&_caption(zero_shot)',
             'only_image(few_shot)', 'image_&_caption(few_shot)', 'image_&_caption_&_pinyin(few_shot)',
@@ -725,8 +725,8 @@ def vlm_chat_driven_meme_response(dataset_path:str, difficulty:str, model:str, c
             'intern-vl2_5-38b': call_intern_vl2,
             'intern-vl2_5-26b': call_intern_vl2,
             'intern-vl2_5-8b': call_intern_vl2,
-            'llava-onevision-qwen2-72b-ov-chat': call_llava_onevision,
-            'llava-onevision-qwen2-7b-ov': call_llava_onevision,
+#            'llava-onevision-qwen2-72b-ov-chat': call_llava_onevision,
+#            'llava-onevision-qwen2-7b-ov': call_llava_onevision,
             'minicpm-v-2_6': call_minicpm}
     mode = [None, 'only_image(zero_shot)', 'image_&_caption(zero_shot)',
             'only_image(few_shot)', 'image_&_caption(few_shot)', 'image_&_caption_&_pinyin(few_shot)',
@@ -1048,15 +1048,15 @@ def vlm_caption_pinyin(dataset, model:str, client, language:str, one_shot:bool, 
     call = {'gpt-4o-2024-08-06': call_gpt4o,
             'gpt-4o-mini-2024-07-18': call_gpt4o_mini,
             'claude-3-5-sonnet-20241022': call_claude35sonnet,
-            'claude-3-5-haiku-20241022': call_claude35haiku,
+#            'claude-3-5-haiku-20241022': call_claude35haiku,
             'qwen2.5-vl-72b-instruct': call_qwen2_vl,
             'qwen2.5-vl-7b-instruct': call_qwen2_vl,
             'intern-vl2_5-78b': call_intern_vl2,
             'intern-vl2_5-38b': call_intern_vl2,
             'intern-vl2_5-26b': call_intern_vl2,
             'intern-vl2_5-8b': call_intern_vl2,
-            'llava-onevision-qwen2-72b-ov-chat': call_llava_onevision,
-            'llava-onevision-qwen2-7b-ov': call_llava_onevision,
+#            'llava-onevision-qwen2-72b-ov-chat': call_llava_onevision,
+#            'llava-onevision-qwen2-7b-ov': call_llava_onevision,
             'minicpm-v-2_6': call_minicpm,
             'mantis-8b-siglip-llama3': call_mantis_siglip,
             'idefics3-8b-llama3': call_idefics}
@@ -1136,8 +1136,8 @@ def vlm_image_OCR(dataset, model:str, client, language:str, one_shot:bool, tempe
             'intern-vl2_5-38b': call_intern_vl2,
             'intern-vl2_5-26b': call_intern_vl2,
             'intern-vl2_5-8b': call_intern_vl2,
-            'llava-onevision-qwen2-72b-ov-chat': call_llava_onevision,
-            'llava-onevision-qwen2-7b-ov': call_llava_onevision,
+#            'llava-onevision-qwen2-72b-ov-chat': call_llava_onevision,
+#            'llava-onevision-qwen2-7b-ov': call_llava_onevision,
             'minicpm-v-2_6': call_minicpm,
             'mantis-8b-siglip-llama3': call_mantis_siglip,
             'idefics3-8b-llama3': call_idefics}

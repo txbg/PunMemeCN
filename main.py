@@ -27,11 +27,13 @@ if __name__ == "__main__":
         else:
             languages, prompt_types = ['cn'], [1, 2]
         dataset_path = './data/pun_meme/cn'
+        '''
         # 1.1. Pun Meme Detection
         for language in languages:
             for prompt_type in prompt_types:
                 vlm_pun_meme_detection(dataset_path, model=model, client=client, language=language,
                                        prompt_mode=prompt_type, pilot=False, save=True)
+        '''
         # 1.2. Pun Meme Sentiment Analysis
         for language in languages:
             for prompt_type in prompt_types:
